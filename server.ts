@@ -24,6 +24,7 @@ const db = mongoose.connect(mongoDbUri, {
     connectTimeoutMS: 1000,
     tlsCAFile: (process.env.NODE_ENV == 'production' ? 'global-bundle.pem': undefined)
 });
+//dodat sertifikat
 db.catch((err) => {
     console.log(`Failed to connect to mongodb: ${mongoDbUri}`)
     console.log(err) 
